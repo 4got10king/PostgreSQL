@@ -1,0 +1,12 @@
+SELECT 
+    pp.name AS person_name,
+    pz.name AS pizzeria_name
+FROM 
+    person_visits pv
+INNER JOIN person pp ON pv.person_id = pp.id
+INNER JOIN pizzeria pz ON pv.pizzeria_id = pz.id
+WHERE 
+    pv.visit_date BETWEEN '2022-01-07' AND '2022-01-09'
+ORDER BY 
+    pp.name ASC, 
+    pz.name DESC;

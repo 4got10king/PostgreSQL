@@ -1,0 +1,6 @@
+SELECT *,
+    CASE 
+        WHEN name = 'Denis' THEN 'true' 
+        ELSE 'false' 
+    END AS check_name
+FROM person;
